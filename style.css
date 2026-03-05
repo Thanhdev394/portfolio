@@ -40,6 +40,11 @@
     font-family: 'Pa';
     src: url('fonts/Pa-Regular.ttf') format('truetype');
 }
+@font-face
+{
+    font-family: 'UTM Micra';
+    src: url('fonts/UTM-Micra.ttf') format('truetype');
+}
 * {
     margin: 0;
     padding: 0;
