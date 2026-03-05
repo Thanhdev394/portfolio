@@ -14,6 +14,10 @@
     font-family: 'F1-Wide';
     src: url('fonts/Formula1-Việt Hóa-Wide.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'F1-Regular';
+    src: url('fonts/Formula1-Việt Hóa-Regular.ttf') format('truetype');
+}
 
 /* Font KHInterference - Dành cho nội dung công nghệ, chỉ số */
 @font-face {
@@ -30,6 +34,11 @@
 @font-face {
     font-family: 'Northwell';
     src: url('fonts/Northwell-Alt.ttf') format('truetype');
+}
+@font-face
+{
+    font-family: 'Pa';
+    src: url('fonts/Pa-Regular.ttf') format('truetype');
 }
 * {
     margin: 0;
@@ -53,12 +62,20 @@ body {
     display: block;
     font-family: 'F1-Bold', sans-serif; /* Tên dùng font Wide cho nó vắt vẻo */
     font-size: 5rem;
-    color: #e10600;
+    color: #ffffff;
     text-transform: uppercase;
     margin-top: 5px;
     line-height: 1; /* Giúp tên không bị cách quá xa dòng trên */
 }
-
+#hero h1 span span {
+    display: block;
+    font-family: 'Northwell', cursive; /* Tên dùng font Wide cho nó vắt vẻo */
+    font-size: 5rem;
+    color: #e9f851;
+    text-transform: uppercase;
+    margin-top: 5px;
+    line-height: 1; /* Giúp tên không bị cách quá xa dòng trên */
+}
 /* Cái Footer mà có câu "Next year is our year" dùng Northwell thì cực nghệ */
 footer p:last-child {
     font-family: 'Northwell', cursive;
@@ -112,6 +129,55 @@ nav ul li a {
     padding: 50px 10%;
 }
 
+#about {
+    padding: 60px 10%;
+    background: #1a1a1a;
+}
+
+#about h2 {
+    font-family: 'F1-Wide', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap; /* Tự xuống dòng nếu màn hình nhỏ */
+    gap: 25px;
+    justify-content: space-between;
+    align-items: stretch; /* ĐÂY LÀ CHÌA KHÓA: Ép các card cao bằng nhau */
+}
+
+.card {
+    background: #2a2a2a;
+    flex: 1;
+    min-width: 280px; /* Đảm bảo card không bị quá hẹp */
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    border-left: 5px solid #e10600; /* Viền đỏ F1 bên trái */
+    display: flex;
+    flex-direction: column; /* Sắp xếp nội dung bên trong theo cột */
+}
+
+.card h3 {
+    font-family: 'F1-Bold', sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.card p {
+    font-family: 'F1-Regular', sans-serif;
+    color: #cccccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1; /* Đẩy nội dung lấp đầy khoảng trống để card luôn đều */
+}
+
 .card {
     background: #333;
     padding: 20px;
@@ -143,13 +209,22 @@ footer {
     font-size: 0.8rem;
     color: #888;
 }
+
+
 /* Gaming Section Styles */
 #gaming-library {
     padding: 50px 10%;
     background-color: #000;
 }
 
+#gaming-library h2 {
+    font-family: 'F1-Wide', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
 .game-category h3 {
+    font-family: 'F1-Bold', sans-serif;
     color: #e10600;
     margin: 30px 0 15px 0;
     text-transform: uppercase;
@@ -158,6 +233,7 @@ footer {
 }
 
 .game-category h4 {
+    font-family: 'F1-Regular', sans-serif;
     color: #aaa;
     margin: 20px 0 10px 0;
 }
