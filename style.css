@@ -1,0 +1,214 @@
+/* Reset cơ bản */
+/* Font Formula1 - Dành cho Tên và Tiêu đề lớn */
+@font-face {
+    font-family: 'F1-Black';
+    src: url('fonts/Formula1-Việt Hóa-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'F1-Bold';
+    src: url('fonts/Formula1-Việt Hóa-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'F1-Wide';
+    src: url('fonts/Formula1-Việt Hóa-Wide.ttf') format('truetype');
+}
+
+/* Font KHInterference - Dành cho nội dung công nghệ, chỉ số */
+@font-face {
+    font-family: 'Interference-Bold';
+    src: url('fonts/KHInterference-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Interference-Light';
+    src: url('fonts/KHInterference-Light.otf') format('opentype');
+}
+
+/* Font Northwell - Dành cho chữ ký hoặc mấy câu Quote nghệ nghệ */
+@font-face {
+    font-family: 'Northwell';
+    src: url('fonts/Northwell-Alt.ttf') format('truetype');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'UTM Micra', sans-serif;
+}
+
+body {
+    background-color: #1a1a1a; /* Đen huyền bí */
+    color: #ffffff;
+    line-height: 1.6;
+}
+#hero h1 {
+    font-family: 'Interference-Light', sans-serif; /* Chữ "Chào tôi là" thanh mảnh */
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+#hero h1 span {
+    display: block;
+    font-family: 'F1-Bold', sans-serif; /* Tên dùng font Wide cho nó vắt vẻo */
+    font-size: 5rem;
+    color: #e10600;
+    text-transform: uppercase;
+    margin-top: 5px;
+    line-height: 1; /* Giúp tên không bị cách quá xa dòng trên */
+}
+
+/* Cái Footer mà có câu "Next year is our year" dùng Northwell thì cực nghệ */
+footer p:last-child {
+    font-family: 'Northwell', cursive;
+    font-size: 1.5rem;
+    color: #ffca28; /* Màu vàng nghệ cho nó nổi */
+}
+/* Thanh Menu */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background: #000;
+    border-bottom: 3px solid #e10600; /* Màu đỏ F1 đặc trưng */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+/* Phần Hero (Đầu trang) */
+#hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://media.formula1.com/image/upload/t_16by9Centre/c_lfill,w_2048/q_auto/v1740000000/fom-website/2026%20regulations/2026_Explainer_FIA_Above_1920x1080.webp'); /* Thay link ảnh đua xe vào đây */
+    background-size: cover;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* Thẻ Card */
+.skill-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 10%;
+}
+
+.card {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #e10600;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: #444;
+}
+
+/* Sở thích */
+#hobbies {
+    padding: 50px 10%;
+    background: #111;
+}
+
+.hobby-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px dashed #555;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: #888;
+}
+/* Gaming Section Styles */
+#gaming-library {
+    padding: 50px 10%;
+    background-color: #000;
+}
+
+.game-category h3 {
+    color: #e10600;
+    margin: 30px 0 15px 0;
+    text-transform: uppercase;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+}
+
+.game-category h4 {
+    color: #aaa;
+    margin: 20px 0 10px 0;
+}
+
+.game-grid {
+    display: grid;
+    /* Tự động chia cột tùy theo độ rộng màn hình */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.game-card {
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #333;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    border-color: #e10600;
+}
+
+.game-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover; /* Giúp ảnh không bị méo */
+}
+
+.game-card p {
+    padding: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+/* Sửa lỗi chữ xanh cho các thẻ link */
+.game-card, .game-card:visited {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: #ffffff;        /* Ép màu chữ về trắng */
+}
+
+/* Đảm bảo khi nhấn vào nó không bị đổi màu khác */
+.game-card p {
+    color: #ffffff;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Thêm hiệu ứng đổi màu khi hover cho nó "Pro" */
+.game-card:hover p {
+    color: #e10600; /* Khi di chuột vào thì tên game đổi sang màu đỏ F1 */
+}
